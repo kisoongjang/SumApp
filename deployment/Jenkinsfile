@@ -26,7 +26,7 @@ podTemplate(label: label,
 		
 	  hubotSend message: "*Release Started*. \n Releasing Test Project. :sunny: \n<!here> <!channel> <@nrayapati> ", tokens: "BUILD_NUMBER,BUILD_ID", status: 'STARTED'
 	  stage('Get Source') {
-		git "https://github.com/minguss/SumApp.git"
+		git "https://github.com/kisoongjang/SumApp.git"
 	  }
 
 	  def props = readProperties  file:'deployment/pipeline.properties'
