@@ -84,7 +84,7 @@ podTemplate(label: label,
 		
 		stage( "Approver" ){
 //		    input "배포를 승인하시겠습니까?"
-		hubotApprove message: 'Promote to Production?'
+		//hubotApprove message: 'Promote to Production?'
 		}
 	  stage( 'Deploy to Cluster' ) {
 		container('kubectl') {
@@ -101,10 +101,10 @@ podTemplate(label: label,
 	  }
 		
 //	  notifySuccessful()
-	  hubotSend message: "*Release Completed*. \n Releasing Test Project.", tokens: "BUILD_NUMBER,BUILD_ID", status: 'SUCCESS'
+	  //hubotSend message: "*Release Completed*. \n Releasing Test Project.", tokens: "BUILD_NUMBER,BUILD_ID", status: 'SUCCESS'
 	  } catch(e) {
-	  hubotSend message: "*Release Failed*."
-        currentBuild.result = "FAILED"
+	  //hubotSend message: "*Release Failed*."
+          currentBuild.result = "FAILED"
 //        notifyFailed()
     }
 
