@@ -24,7 +24,7 @@ podTemplate(label: label,
 	node(label) {
 	try {
 		
-	  hubotSend message: "*Release Started*. \n Releasing Test Project. :sunny: \n<!here> <!channel> <@nrayapati> ", tokens: "BUILD_NUMBER,BUILD_ID", status: 'STARTED'
+	  //hubotSend message: "*Release Started*. \n Releasing Test Project. :sunny: \n<!here> <!channel> <@nrayapati> ", tokens: "BUILD_NUMBER,BUILD_ID", status: 'STARTED'
 	  stage('Get Source') {
 		git "https://github.com/kisoongjang/SumApp.git"
 	  }
