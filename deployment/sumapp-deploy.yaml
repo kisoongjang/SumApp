@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sumapp
-        image: mycluster.icp:8500/devops/sumapp
+        image: docker.io/nalleyda/sample-devops:0.0.1
         imagePullPolicy: Always
         ports:
         - containerPort: 9080
