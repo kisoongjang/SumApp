@@ -60,7 +60,7 @@ podTemplate(label: label,
 		  docker.withRegistry("${dockerRegistry}", 'registry-credentials') {
 			sh "docker build . -t ${image}:0.0.1"
 			sh "docker images"
-			sh "docker push ${image}:0.0.1"
+			//sh "docker push ${image}:0.0.1"
 //			sh "docker tag ${image}:${tag} ${image}:latest"
 //			sh "docker push ${image}:latest"
 		  }
