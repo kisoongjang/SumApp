@@ -95,7 +95,7 @@ podTemplate(label: label,
 							  passwordVariable: 'DOCKER_HUB_PASSWORD']]) {
 			  
 			  sh "kubectl apply -n ${namespace} -f ${deployment}"
-			  sh "sleep 5"
+			  sh "sleep 30"
 			  sh "kubectl apply -n ${namespace} -f ${service}"
 		  }
 		}
